@@ -5,9 +5,12 @@ from json import JSONDecodeError
 from typing import Dict
 from task import Task
 
-def write_tasks(tasks:Dict[str,Dict[str,Task]]):
-    with open("tasks.json", 'w') as file:
-        json.dump(tasks["tasks"], file, indent=4)
+def write_tasks(tasks: Dict[str, Dict[str, Task]]) -> None:
+    try:
+        with open("tasks.json", 'w') as file:
+            json.dump(tasks["tasks"], file, indent=4)
+    except IOError as e:
+        print(f"Error writing to file: {e}")
 
 def read_tasks()->Dict[str,Task]:
    try:
