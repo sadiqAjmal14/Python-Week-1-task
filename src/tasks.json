@@ -8,20 +8,5 @@
         "name": "Workout",
         "description": "Go to the gym for a workout session",
         "completed": true
-    },
-    "e64b53a1": {
-        "name": "Read Book",
-        "description": "Finish reading the current book",
-        "completed": false
-    },
-    "f7d82c99": {
-        "name": "Email Responses",
-        "description": "Respond to pending work emails",
-        "completed": true
-    },
-    "a5128b3d": {
-        "name": "Garden Maintenance",
-        "description": "Trim the plants and water the garden",
-        "completed": false
     }
 }

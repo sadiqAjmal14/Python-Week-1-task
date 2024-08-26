@@ -4,6 +4,7 @@ import uuid
 from json import JSONDecodeError
 from typing import Dict
 from task import Task
+
 def write_tasks(tasks:Dict[str,Dict[str,Task]]):
     with open("tasks.json", 'w') as file:
         json.dump(tasks["tasks"], file, indent=4)
@@ -24,5 +25,5 @@ def print_menu()->None:
     print("1. Add Task\n2. Delete Task\n3. Mark as Completed\n4. List Tasks\n5. Exit")
 
 def generate_id()->str:
-    small_id = str(uuid.uuid4())[:4]
+    small_id = str(uuid.uuid4().hex)
     return small_id
